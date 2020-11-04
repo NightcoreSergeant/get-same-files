@@ -1,0 +1,4 @@
+Manual:
+	program [PATH] [OPTIONS]
+Output:
+	Files with the same name
