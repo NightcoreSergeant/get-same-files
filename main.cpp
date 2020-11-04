@@ -1,7 +1,24 @@
 #include "header.h"
+#define endl "\n"
 
 using namespace std;
 namespace fs = filesystem;
+
+static constexpr const char *USAGE = 
+R"(Manual:
+	GSF [PATH] [OPTIONS]
+Output:
+	Files with the same name
+
+
+          ___.-------.___
+      _.-' ___.--;--.___ `-._
+   .-' _.-'  /  .+.  \  `-._ `-.
+ .' .-'      |-|-o-|-|      `-. `.
+(_ <O__      \  `+'  /      __O> _)
+  `--._``-..__`._|_.'__..-''_.--'
+        ``--._________.--''
+)";
 
 string path;
 map<string, vector<string>> files;
@@ -9,11 +26,7 @@ queue<string> que;
 
 
 void help_msg(){
-	freopen("help_msg.txt", "r", stdin);
-	string line;
-	while(getline(cin, line)){
-		cout << line << endl;
-	}
+	cout << USAGE;
 }
 
 
